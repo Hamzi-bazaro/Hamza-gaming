@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamza Gaming Zone</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #050313;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #09051c;
+  border-bottom: 2px solid #8b00ff;
+  padding: 18px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #bd42ff;
+  text-shadow: 0 0 15px #a000ff;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #c000ff;
+}
+
+.btn {
+  background: linear-gradient(90deg,#7300ff,#d000ff);
+  border: none;
+  color: white;
+  padding: 13px 23px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px #9500ff;
+}
+
+.hero {
+  min-height: 430px;
+  padding: 75px 6%;
+  background:
+    radial-gradient(circle at 80% 50%,#321078,#08051c 55%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero h1 {
+  font-size: clamp(42px,7vw,75px);
+  line-height: 1.1;
+}
+
+.hero h1 span {
+  color: #c000ff;
+  text-shadow: 0 0 20px #a000ff;
+}
+
+.hero p {
+  font-size: 19px;
+  margin: 20px 0;
+  color: #ddd;
+}
+
+.hero-art {
+  font-size: clamp(100px,20vw,190px);
+  filter: drop-shadow(0 0 25px #9500ff);
+}
+
+section {
+  padding: 45px 5%;
+}
+
+.section-title {
+  font-size: 35px;
+  margin-bottom: 28px;
+}
+
+.section-title span {
+  color: #c000ff;
+}
+
+.search {
+  width: 100%;
+  max-width: 380px;
+  padding: 14px;
+  border-radius: 25px;
+  border: 1px solid #a000ff;
+  background: #130b2b;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 20px;
+}
+
+.game-card {
+  background: linear-gradient(145deg,#211044,#0d0920);
+  border: 1px solid #8200ff;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  transition: .3s;
+}
+
+.game-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 22px #9d00ff;
+}
+
+.game-image {
+  height: 145px;
+  display: grid;
+  place-items: center;
+  font-size: 75px;
+  background: linear-gradient(135deg,#29105d,#08051b);
+}
+
+.game-card h3 {
+  padding: 15px 5px;
+  font-size: 20px;
+}
+
+.game-card button {
+  margin-bottom: 17px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 15px;
+}
+
+.feature {
+  background: #160b30;
+  border: 1px solid #8500ff;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.feature span {
+  display: block;
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.join {
+  text-align: center;
+  background: linear-gradient(100deg,#4100a8,#a000e8);
+  border-radius: 20px;
+  padding: 45px 15px;
+}
+
+.join h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #09051c;
+  color: #aaa;
+  border-top: 1px solid #7500d8;
+}
+
+@media(max-width:600px) {
+  header {
+    justify-content: center;
+  }
+  nav {
+    justify-content: center;
+  }
+  .hero {
+    text-align: center;
+    justify-content: center;
+    padding: 55px 5%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">👑 HAMZA GAMING ZONE</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#games">Games</a>
+    <a href="#features">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button class="btn" onclick="goGames()">🎮 Play Now</button>
+</header>
+
+<div class="hero" id="home">
+  <div>
+    <h1>Welcome to<br><span>Hamza Gaming Zone</span></h1>
+    <p>🎮 Play • Learn • Enjoy</p>
+    <p>The Ultimate Gaming Hub for Gamers!</p>
+    <button class="btn" onclick="goGames()">Start Playing →</button>
+    <button class="btn" onclick="alert('Welcome to Hamza Gaming Zone!')">
+      Watch Videos ▶
+    </button>
+  </div>
+
+  <div class="hero-art">🎮</div>
+</div>
+
+<section id="games">
+  <h2 class="section-title">🎮 Popular <span>Games</span></h2>
+
+  <input class="search" id="search"
+  placeholder="Search games..."
+  oninput="searchGames()">
+
+  <div class="games" id="gameList">
+
+    <div class="game-card">
+      <div class="game-image">🔫</div>
+      <h3>PUBG Mobile</h3>
+      <button class="btn" onclick="playGame('PUBG Mobile')">Play Now</button>
+    </div>
+
+    <div class="game-card">
+      <div class="game-image">⛏️</div>
+      <h3>Minecraft</h3>
+      <button class="btn" onclick="playGame('Minecraft')">Play Now</button>
+    </div>
+
+    <div class="game-card">
+      <div class="game-image">🚗</div>
+      <h3>GTA V</h3>
+      <button class="btn" onclick="playGame('GTA V')">Play Now</button>
+    </div>
+
+    <div class="game-card">
+      <div class="game-image">🔥</div>
+      <h3>Free Fire</h3>
+      <button class="btn" onclick="playGame('Free Fire')">Play Now</button>
+    </div>
+
+    <div class="game-card">
+      <div class="game-image">🪂</div>
+      <h3>Fortnite</h3>
+      <button class="btn" onclick="playGame('Fortnite')">Play Now</button>
+    </div>
+
+    <div class="game-card">
+      <div class="game-image">🎯</div>
+      <h3>Call of Duty</h3>
+      <button class="btn" onclick="playGame('Call of Duty')">Play Now</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="features">
+  <h2 class="section-title">Why Choose <span>Us?</span></h2>
+
+  <div class="features">
+    <div class="feature">
+      <span>⚡</span>Fast Gaming Experience
+    </div>
+    <div class="feature">
+      <span>🛡️</span>Safe Gaming
+    </div>
+    <div class="feature">
+      <span>🏆</span>Gaming Community
+    </div>
+    <div class="feature">
+      <span>🎧</span>Player Support
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="join">
+    <h2>Join Hamza Gaming Zone!</h2>
+    <p>Play Games • Improve Skills • Enjoy Gaming</p>
+    <br>
+    <button class="btn" onclick="goGames()">Explore Games →</button>
+  </div>
+</section>
+
+<footer id="contact">
+  <h3>👑 Hamza Gaming Zone</h3>
+  <p>© 2026 Hamza Gaming Zone. All Rights Reserved.</p>
+  <p>Made with ❤️ for Gamers</p>
+</footer>
+
+<script>
+function goGames() {
+  document.getElementById("games").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+function playGame(name) {
+  alert(name + " selected! Add your game link to play.");
+}
+
+function searchGames() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let cards = document.querySelectorAll(".game-card");
+
+  cards.forEach(card => {
+    let name = card.querySelector("h3").innerText.toLowerCase();
+    card.style.display = name.includes(input) ? "" : "none";
+  });
+}
+</script>
+
+</body>
+</html>
